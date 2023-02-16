@@ -391,7 +391,7 @@ $(document).ready(function(){
                         Total +=parseInt(val.Total);
                         Total_terima +=isNaN(parseInt(val.total_terima)) ? 0 : parseInt(val.total_terima);
                         Total_bayar += isNaN(parseInt(val.total_bayar)) ? 0 : parseInt(val.total_bayar);
-                        Total_Balance+= isNaN(parseInt(val.total_bayar)) ? 0 : parseInt(val.Balance);
+                        Total_Balance+= parseInt(val.Balance);
 
                     });
                     var  apped_tfoot= 
