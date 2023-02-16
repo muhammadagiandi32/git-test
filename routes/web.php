@@ -25,6 +25,9 @@ Route::get('/session', function (Request $request) {
     $data = $request->session()->all();
     dd($data);
 });
+Route::get('/', function (Request $request) {
+    return "test";
+});
 Route::get('/{role}', function () {
     return view('home');
 })->middleware('role');

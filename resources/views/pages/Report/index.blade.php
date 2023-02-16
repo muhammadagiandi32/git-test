@@ -22,7 +22,7 @@
         <!--begin::Header-->
         <div class="card-header border-0 pt-5">
             <h3 class="card-title align-items-start flex-column">
-                <span class="card-label fw-bolder fs-3 mb-1">Report</span>
+                <span class="card-label fw-bolder fs-3 mb-1">Rekapitulasi</span>
             </h3>
             <div class="col-lg-12">
                 <div class="form-group row mb-5">
@@ -35,7 +35,7 @@
                         <input autocomplete="off" type="text" name="date2" id="datepicker2" class="form-control" />
                     </div>
                     <div class="col-lg-3">
-                        <label>Jenis Report:</label>
+                        <label>Jenis Rekapitulasi:</label>
                         <select class="form-control selectpicker" name="jenisReport" tabindex="null">
                             <option value="-">-</option>
                             <option value="PO">List PO</option>
