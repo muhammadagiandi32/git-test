@@ -27,11 +27,11 @@
             <div class="col-lg-12">
                 <div class="form-group row mb-5">
                     <div class="col-lg-3">
-                        <label>Date 1:</label>
+                        <label>Dari Tanggal:</label>
                         <input autocomplete="off" type="text" name="date1" id="datepicker" class="form-control" />
                     </div>
                     <div class="col-lg-3">
-                        <label>Date 2:</label>
+                        <label>Sampai Tanggal:</label>
                         <input autocomplete="off" type="text" name="date2" id="datepicker2" class="form-control" />
                     </div>
                     <div class="col-lg-3">
