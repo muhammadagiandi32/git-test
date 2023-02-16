@@ -353,6 +353,7 @@ $(document).ready(function(){
                         <th class='text-end'>Nilai PO</th>
                         <th class='text-end'>Nilai Terima</th>
                         <th class='text-end'>Nilai Pembayaran</th>
+                        <th class='text-end'>Nilai Balance</th>
                         <th>Action</th>
                     </tr>`;
                     thead.append(append_thead);
@@ -370,6 +371,7 @@ $(document).ready(function(){
                                 <td style='text-align:right'>`+new Intl.NumberFormat('en-ID').format(value.Total)+`</td>
                                 <td style='text-align:right'>`+new Intl.NumberFormat('en-ID').format(value.total_terima)+`</td>
                                 <td style='text-align:right'>`+new Intl.NumberFormat('en-ID').format(value.total_bayar)+`</td>
+                                <td style='text-align:right'>`+new Intl.NumberFormat('en-ID').format(value.Balance)+`</td>
                                 <td>
                                     <a href="javascript:void(0)" data-toggle="tooltip" id="viewDetails"  data-id="`+value.nopo+`" data-jenis="`+$('select[name="jenisReport"]').val()+`" data-original-title="View" class="edit btn btn-info btn-sm viewDetails">View</a>
                                 </td>
@@ -383,10 +385,14 @@ $(document).ready(function(){
                     var Total = 0;
                     var Total_terima = 0;
                     var Total_bayar = 0;
+                    var Total_Balance = 0;
+
                     $.each(data, function(key,val){
                         Total +=parseInt(val.Total);
                         Total_terima +=isNaN(parseInt(val.total_terima)) ? 0 : parseInt(val.total_terima);
                         Total_bayar += isNaN(parseInt(val.total_bayar)) ? 0 : parseInt(val.total_bayar);
+                        Total_Balance+= isNaN(parseInt(val.total_bayar)) ? 0 : parseInt(val.Balance);
+
                     });
                     var  apped_tfoot= 
                         `<tr>
@@ -400,6 +406,7 @@ $(document).ready(function(){
                             <td class='text-end'>`+Total.toLocaleString()+`</td>
                             <td class='text-end'>`+Total_terima.toLocaleString()+`</td>
                             <td class='text-end'>`+Total_bayar.toLocaleString()+`</td>
+                            <td class='text-end'>`+Total_Balance.toLocaleString()+`</td>
                             <td></td>
                         </tr>
                         `;

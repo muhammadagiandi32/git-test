@@ -115,7 +115,11 @@ class ReportController extends Controller
                             T_PO_Showroom_head.Kat,
                             T_total_PO.Total_PO as Total,
                             T_total_Terima.total_terima as total_terima,
-                            T_total_bayar.nilaitagihan as total_bayar
+                            T_total_bayar.nilaitagihan as total_bayar,
+                            CASE 
+                                WHEN T_total_PO.Total_PO - T_total_bayar.nilaitagihan IS NULL THEN T_total_PO.Total_PO
+                                ELSE T_total_PO.Total_PO - T_total_bayar.nilaitagihan
+                            END Balance
                         '
                     )
                     ->where('T_PO_Showroom_head.Kat', 'PO')
